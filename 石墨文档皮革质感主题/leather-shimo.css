@@ -1,0 +1,361 @@
+/* ==UserStyle==
+@name           石墨文档皮革质感主题 | leather-shimo
+@namespace      https://github.com/li-zyang/
+@version        1.0.0
+@description    石墨文档皮革质感主题（深色）
+@author         阿昭
+==/UserStyle== */
+
+@-moz-document domain("shimo.im") {
+  :root {
+    --bg1: #202020;
+    --bg2: #2a2a2c;
+    --bg3: #333333;
+    --bg4: #383838;
+    --shadow-bg2: #272727;
+    --shadow-bg3: #2f2f2f;
+    --shadow-bg4: #343434;
+    --header-bg: #404040;
+    --default-fg: #e0e0e0;
+    --dark-fg: #949292;
+    --title-fg: #9b9b9b;
+    --link-unvisited-fg:#;
+    --link-visited-fg: #6da2d7;
+    --split-line-fg: #777;
+    --button-bg: #424242;
+    --button-bg-selected: #404040;
+    --button-header-bg: #505050;
+    --button-header-bg-selected: #404040;
+    --button-fg-grey: #ccc;
+    --button-fg-darkgrey: #aaa;
+    --button-fg-blue: #b2c3d5;
+    --button-fg-blue-darkened: #95a6b9;
+    --img-opacity: 0.7;
+    --grey-level0: rgb(0, 0, 0);
+    --grey-level1: rgb(51, 51, 51);
+    --grey-level2: rgb(65, 67, 67);
+    --grey-level3: rgb(90, 90, 90);
+    --grey-level4: rgb(123 ,127, 131);
+    --grey-level5: rgb(165, 165, 165);
+    --grey-level6: rgb(204, 204, 204);
+    --grey-level7: rgb(215, 216, 217);
+    --grey-level8: rgb(243, 243, 244);
+    --grey-level9: rgb(255, 255, 255);
+    background: var(--bg1) !important;
+  }
+  html, body {
+    background: var(--bg1) !important;
+  }
+  div {
+    background: transparent;
+  }
+  img {
+    opacity: var(--img-opacity) !important;
+    transition-duration: 0.5s;
+  }
+  img :hover {
+    opacity: 1 !important
+  }
+  path {
+    fill: var(--button-fg-grey) !important;
+  }
+  button {
+    background: var(--button-bg) !important;
+    border-color: transparent !important;
+    color: var(--button-fg-grey) !important;
+  }
+  button *, button::before, button::after {
+    color: var(--button-fg-grey) !important;
+  }
+  button:hover {
+    background: var(--button-bg-selected) !important;
+  }
+  input {
+    background: transparent !important;
+    color: var(--default-fg) !important;
+  }
+  input[type="button"] {
+    background: var(--button-bg) !important;
+    border-color: transparent !important;
+    color: var(--button-fg-grey) !important;
+  }
+  input[type="button"]:hover {
+    background: var(--button-bg-selected) !important;
+  }
+  div[class^="sc-"] {
+    background: transparent !important;
+  }
+  div[class=""] {
+    background: transparent !important;
+    border-color: transparent !important;
+  }
+  div[class~="close"] {
+    background: transparent !important;
+  }
+  #layout-top {
+    background: var(--header-bg) !important;
+  }
+  #layout-top div {
+    background: transparent !important;
+  }
+  .sm-left-panel {
+    background: var(--bg3) !important;
+    color: var(--default-fg) !important;
+    border-color: transparent !important;
+  }
+  .sm-left-panel *:not(.icon) {
+    background: transparent !important;
+    color: var(--default-fg) !important;
+  }
+  .finder-right-menu {
+    background: var(--bg2) !important;
+    color: var(--default-fg) !important;
+  }
+  .finder-right-menu 
+  *:not(.icon):not(.grid):not(.list):not(.tile-item):not(.file-item):not(.folder) {
+    background: transparent !important;
+  }
+  .finder-right-menu *:not(.icon):not(.grid):not(.list) {
+    color: var(--default-fg) !important;
+  }
+  .tile-item:hover, .file-item:hover, .folder:hover {
+    background: var(--bg3) !important;
+    border-color: transparent !important;
+  }
+  .sm-menu, .sm-menu-root, .sm-dropdown-menu {
+    background: var(--bg3) !important;
+    color: var(--default-fg) !important;
+  }
+  .sm-dropdown > div, .sm-dropdown-tip > div, .sm-dropdown-placement-bottomRight > div {
+    background: var(--bg3) !important;
+    color: var(--default-fg) !important;
+  }
+  .sm-menu > *, .sm-menu-root > * ,.sm-dropdown-menu > * {
+    background: transparent !important;
+    color: var(--default-fg) !important;
+  }
+  .sm-menu *, .sm-menu-root * ,.sm-dropdown-menu * {
+    color: var(--default-fg) !important;
+  }
+  .sm-menu-item-active {
+    background: var(--button-bg-selected) !important;
+  }
+  .sm-menu-item {
+    color: var(--default-fg) !important;
+  }
+  .sm-menu-item-divider {
+    background: var(--split-line-fg) !important;
+  }
+  #sm-file-search > div {
+    background: var(--bg3) !important;
+    border-color: transparent !important;
+  }
+  .page-header-container {
+    background: var(--header-bg) !important;
+    border-color: transparent !important;
+  }
+  .ql-toolbar {
+    background: var(--bg3) !important;
+  }
+  #editor-scroller {
+    background: var(--bg1) !important;
+  }
+  #editor {
+    background: var(--bg2) !important;
+    box-shadow: 0 1px 5px var(--shadow-bg3);
+  }
+  #ql-title-input {
+    color: var(--default-fg) !important;
+  }
+  .ql-table-of-content {
+    background: var(--bg4) !important;
+  }
+  .ql-table-of-content * {
+    background: transparent !important;
+  }
+  .toolbar-shadow {
+    background: var(--shadow-bg2) !important;
+    box-shadow: 0 3px 2px var(--shadow-bg3);
+  }
+  .doc-directory-menu {
+    background: var(--bg2) !important;
+    box-shadow: 0 2px 12px 0 var(--shadow-bg2) !important;
+  }
+  .doc-directory-menu-line {
+    background: var(--dark-fg) !important;
+  }
+  .sm-button {
+    background: var(--button-bg) !important;
+    transition-duration: 0.5s !important;
+  }
+  .sm-button:hover {
+    background: var(--button-bg-selected) !important;
+  }
+  .page-header-container .sm-button {
+    background: var(--button-header-bg) !important;
+    transition-duration: 0.5s !important;
+  }
+  .sm-dropdown::before, .sm-dropdown-tip::before, .sm-dropdown-placement-bottomLeft::before {
+    background: var(--bg3) !important;
+  }
+  .sm-dropdown::after, .sm-dropdown-tip::after, .sm-dropdown-placement-bottomLeft::after {
+    border-bottom-color: transparent !important;
+  }
+  .ql-formats > * {
+    color: var(--dark-fg) !important;
+  }
+  /*
+  .ql-snow .ql-picker-label::before {
+	  color: var(--dark-fg) !important;
+  }*/
+  .ql-formats > button:not(.ql-active) {
+    background: transparent !important;
+  }
+  .sm-qrcode {
+    background: rgba(255, 255, 255, var(--img-opacity)) !important; 
+  }
+  .ql-toolbar.ql-snow button.ql-active, .ql-toolbar.ql-snow .ql-picker-label.ql-active {
+	  box-shadow: none;
+	  background: var(--button-bg-selected);
+	  border-color: transparent !important;
+  }
+  .ql-picker-options {
+    background: var(--bg4) !important;
+  }
+  .ql-replacement-container {
+    background: var(--bg4) !important;
+  }
+  .find-input {
+    border-color: transparent !important;
+    background: var(--bg3) !important;
+    box-shadow: none !important;
+  }
+  .replace-input {
+    border-color: transparent !important;
+    background: var(--bg3) !important;
+    box-shadow: none !important;
+  }
+  .toggle-replace {
+    background: var(--button-bg) !important;
+    color: var(--default-fg) !important;
+    border-color: transparent !important;
+  }
+  .toggle-replace span {
+    color: var(--default-fg) !important;
+  }
+  .sidebar-manager {
+	  background: transparent;
+	  border-bottom: none;
+	  box-shadow: none;
+  }
+  .ql-toolbar.ql-snow .ql-inserts-label {
+	  background-color: var(--bg3);
+	  border-color: transparent;
+	  box-shadow: 0 1px 6px var(--shadow-bg3);
+  }
+  .ql-hover-picker {
+    background-color: var(--button-bg);
+  }
+  .ql-picker-label::before {
+    color: var(--button-fg-grey) !important;
+  }
+  .ql-toolbar.ql-snow .ql-inserts-label {
+	  background-color: var(--bg4) !important;
+	  border-color: transparent !important;
+	  box-shadow: 0 1px 6px var(--shadow-bg4) !important;
+  }
+  .ql-toolbar.ql-snow .ql-inserts-label button {
+	  background-color: transparent !important;
+  }
+  .ql-hover-picker {
+	  background-color: var(--bg4) !important;
+  }
+  .ql-editor *[style^="color: rgb(255, 255, 255)"] {
+    color: var(--grey-level0) !important;
+  }
+  .ql-editor *[style^="color: rgb(243, 243, 244)"] {
+    color: var(--grey-level1) !important;
+  }
+  .ql-editor *[style^="color: rgb(215, 216, 217)"] {
+    color: var(--grey-level2) !important;
+  }
+  .ql-editor *[style^="color: rgb(204, 204, 204)"] {
+    color: var(--grey-level3) !important;
+  }
+  .ql-editor *[style^="color: rgb(165, 165, 165)"] {
+    color: var(--grey-level4) !important;
+  }
+  .ql-editor *[style^="color: rgb(123, 127, 131)"] {
+    color: var(--grey-level5) !important;
+  }
+  .ql-editor * {
+    color: var(--grey-level6) !important;
+  }
+  .ql-editor *[style^="color: rgb(65, 70, 75)"] {
+    color: var(--grey-level7) !important;
+  }
+  .ql-editor *[style^="color: rgb(51, 51, 51)"] {
+    color: var(--grey-level8) !important;
+  }
+  .ql-editor *[style^="color: rgb(0, 0, 0)"] {
+    color: var(--grey-level9) !important;
+  }
+  .ql-editor *[style^="color: rgb(255, 255, 255)"] * {
+    color: var(--grey-level0) !important;
+  }
+  .ql-editor *[style^="color: rgb(243, 243, 244)"] * {
+    color: var(--grey-level1) !important;
+  }
+  .ql-editor *[style^="color: rgb(215, 216, 217)"] * {
+    color: var(--grey-level2) !important;
+  }
+  .ql-editor *[style^="color: rgb(204, 204, 204)"] * {
+    color: var(--grey-level3) !important;
+  }
+  .ql-editor *[style^="color: rgb(165, 165, 165)"] * {
+    color: var(--grey-level4) !important;
+  }
+  .ql-editor *[style^="color: rgb(123, 127, 131)"] * {
+    color: var(--grey-level5) !important;
+  }
+  .ql-editor * {
+    color: var(--grey-level6) !important;
+  }
+  .ql-editor *[style^="color: rgb(65, 70, 75)"] * {
+    color: var(--grey-level7) !important;
+  }
+  .ql-editor *[style^="color: rgb(51, 51, 51)"] * {
+    color: var(--grey-level8) !important;
+  }
+  .ql-editor *[style^="color: rgb(0, 0, 0)"] * {
+    color: var(--grey-level9) !important;
+  }
+  .ql-sheet-border {
+    background: var(--header-bg) !important;
+  }
+  .ql-sheet-border:hover {
+    background: var(--dark-fg) !important;
+  }
+  .ql-sheet {
+    border-top: 1px solid var(--split-line-fg) !important;
+  }
+  .ql-editor table.ql-sheet td:first-child {
+	  border-left: 1px solid var(--split-line-fg) !important;
+  }
+  .ql-sheet-cell {
+    border-right: 1px solid var(--split-line-fg) !important;
+    border-bottom: 1px solid var(--split-line-fg) !important;
+  }
+  .ql-title-box {
+    border-bottom: 1px solid var(--split-line-fg);
+  }
+  .sm-back-top {
+    background: var(--button-bg) !important;
+  }
+  #sm-help-center-container {
+    background: var(--button-bg) !important;
+  }
+  #sm-help-center-container div {
+    background-color: transparent !important;
+  }
+}
