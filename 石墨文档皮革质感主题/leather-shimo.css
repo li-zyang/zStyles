@@ -33,13 +33,13 @@
     --img-opacity: 0.7;
     --grey-level0: rgb(0, 0, 0);
     --grey-level1: rgb(51, 51, 51);
-    --grey-level2: rgb(65, 67, 67);
+    --grey-level2: rgb(67, 66, 65);
     --grey-level3: rgb(90, 90, 90);
-    --grey-level4: rgb(123 ,127, 131);
-    --grey-level5: rgb(165, 165, 165);
-    --grey-level6: rgb(204, 204, 204);
-    --grey-level7: rgb(215, 216, 217);
-    --grey-level8: rgb(243, 243, 244);
+    --grey-level4: rgb(128 ,127, 127);
+    --grey-level5: rgb(161, 160, 160);
+    --grey-level6: rgb(190, 190, 190);
+    --grey-level7: rgb(210, 210, 210);
+    --grey-level8: rgb(240, 238, 240);
     --grey-level9: rgb(255, 255, 255);
     background: var(--bg1) !important;
   }
