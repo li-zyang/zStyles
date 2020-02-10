@@ -115,6 +115,9 @@
     background: var(--bg4) !important;
     color: var(--default-fg) !important;
   }
+  span[class*="ql-"]::before {
+    border-color: transparent transparent var(--bg4) transparent !important;
+  }
   #layout-top {
     background: var(--header-bg) !important;
   }
@@ -491,5 +494,25 @@
   }
   .color-picker-input {
     color: var(--bg4) !important;
+  }
+  .ql-code-block-container {
+    background-color: var(--bg4) !important;
+    border: 1px solid transparent !important;
+    color: var(--default-fg) !important;
+    border-radius: 3px !important;
+  }
+  .hljs-selector-tag {
+    
+  }
+  .hljs-number {
+    
+  }
+  .ql-toolbar.ql-snow .ql-box-label {
+    background-color: var(--bg4);
+    border-color: transparent;
+    box-shadow: 0 1px 6px var(--shadow-bg4);
+  }
+  .sm-back-top svg rect {
+    opacity: 0
   }
 }
