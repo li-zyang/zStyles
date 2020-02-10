@@ -45,9 +45,11 @@
   }
   html, body {
     background: var(--bg1) !important;
+    color: var(--default-fg) !important;
   }
   div {
     background: transparent;
+    color: var(--default-fg) !important;
   }
   img {
     opacity: var(--img-opacity) !important;
@@ -91,6 +93,18 @@
   }
   div[class~="close"] {
     background: transparent !important;
+  }
+  div[data-disabled="true"], div[data-disabled="true"] span {
+    color: var(--dark-fg) !important;
+  }
+  div[class^="_dropdown_list"] {
+    background: var(--bg4) !important;
+    color: var(--default-fg) !important;
+  }
+  div[class^="_dropdown_list"] div, 
+  div[class^="_dropdown_list"] span {
+    background: var(--bg4) !important;
+    color: var(--default-fg) !important;
   }
   #layout-top {
     background: var(--header-bg) !important;
@@ -357,5 +371,43 @@
   }
   #sm-help-center-container div {
     background-color: transparent !important;
+  }
+  .s-new-toolbar .root {
+    color: var(--default-fg) !important;
+    background: var(--bg2) !important;
+  }
+  .tabMenuHead:hover {
+    background: var(--bg3) !important;
+  }
+  .sm-sheet-view-container .fx-editor-wrap {
+    border-top: 1px solid transparent;
+    background-color: var(--bg3);
+    border-bottom: 1px solid transparent;
+  }
+  .ql-show > [class*="ql-long-"]::before, .ql-show div.ql-ordered-container > [class*="ql-long-"]::before, 
+  .ql-show div.ql-bullet-container > [class*="ql-long-"]::before, 
+  .ql-show div.ql-code-block[class*="ql-authorBlock-"]::before {
+    background-color: transparent;
+  }
+  .sm-docs-container {
+    background: transparent !important;
+  }
+  .sm-dropdown-tip, .sm-dropdown-placement-bottomRight {
+    background: var(--bg3);
+    color: var(--default-fg);
+  }
+  .sm-dropdown-tip div, .sm-dropdown-placement-bottomRight div {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .sm-dropdown-tip span, .sm-dropdown-placement-bottomRight span {
+    background: transparent !important;
+    color: var(--default-fg) !important;
+    box-shadow: none !important;
+  }
+  .sm-dropdown-tip input, .sm-dropdown-placement-bottomRight input {
+    background: var(--bg2) !important;
+    color: var(--default-fg) !important;
+    box-shadow: none !important;
   }
 }
