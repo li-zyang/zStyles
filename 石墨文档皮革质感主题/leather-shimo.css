@@ -59,6 +59,15 @@
     opacity: 1 !important
   }
   path {
+    color: var(--button-fg-grey) !important;
+    fill: var(--button-fg-grey) !important;
+  }
+  svg path {
+    color: var(--button-fg-grey) !important;
+    fill: var(--button-fg-grey) !important;
+  }
+  svg g {
+    color: var(--button-fg-grey) !important;
     fill: var(--button-fg-grey) !important;
   }
   button {
@@ -409,5 +418,78 @@
     background: var(--bg2) !important;
     color: var(--default-fg) !important;
     box-shadow: none !important;
+  }
+  .sm-sheet-view-container .fx-editor-wrap {
+    border-top: 1px solid transparent;
+    background-color: var(--bg2);
+    border-bottom: 1px solid transparent;
+  }
+  .sm-sheet-view-container .fx-editor-wrap {
+    height: 27px;
+  }
+  .sm-sheet-view-container .fx-left-label {
+    color: var(--dark-fg);
+    border-right: 1px solid var(--split-line-fg);
+  }
+  .sm-sheet-view-container #sm-sheet-fx-editor {
+    margin-left: 50px;
+    padding: 3px 10px 3px 10px;
+    background: var(--bg3);
+    min-height: 25px;
+    max-height: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 3px;
+  }
+  .s-new-toolbar .menu__open > .dropMenuHead, .s-new-toolbar .selected {
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px transparent inset;
+    background-color: var(--bg3);
+  }
+  .s-new-toolbar .menu--content {
+    background: var(--bg4);
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.1);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  .s-new-toolbar .dropMenuHead + .menu--body::before {
+    border-bottom-color: var(--bg4);
+  }
+  .s-new-toolbar .dropMenuHead + .menu--body::after {
+    border-bottom-color: var(--bg4);
+  }
+  .s-new-toolbar .toolBar--iconDropTool .fakeIndicator, 
+  .s-new-toolbar .toolBar--iconDropTool .indicator:hover, 
+  .s-new-toolbar .toolBar--iconDropTool .menu__open > .dropMenuHead, 
+  .s-new-toolbar .toolBar--iconDropTool .selected, 
+  .s-new-toolbar .toolBar--iconDropTool .toolBar--textTool:hover .toolBar--iconBtn, 
+  .s-new-toolbar .toolBar--iconDropTool .toolBar--textTool:hover > .menu .dropMenuHead, 
+  .s-new-toolbar .toolBar--iconDropTool.fakeIndicator, 
+  .s-new-toolbar .toolBar--iconDropTool.indicator:hover, 
+  .s-new-toolbar .toolBar--textTool:hover .toolBar--iconDropTool .toolBar--iconBtn, 
+  .s-new-toolbar .toolBar--textTool:hover .toolBar--iconDropTool.toolBar--iconBtn, 
+  .s-new-toolbar .toolBar--textTool:hover > .menu .toolBar--iconDropTool .dropMenuHead, 
+  .s-new-toolbar .toolBar--textTool:hover > .menu .toolBar--iconDropTool.dropMenuHead {
+    box-shadow: none;
+  }
+  .s-new-toolbar .menu__open.toolBar--iconDropTool > .toolBar--iconBtn.dropMenuHead, 
+  .s-new-toolbar .toolBar--iconDropTool .toolBar--arrowBtn:hover, 
+  .s-new-toolbar .toolBar--iconDropTool > .menu > .toolBar--arrowBtn:hover, 
+  .s-new-toolbar .toolBar--iconDropTool > .menu__open > .toolBar--arrowBtn, 
+  .s-new-toolbar .toolBar--iconDropTool > .toolBar--iconBtn.selected, 
+  .s-new-toolbar .toolBar--iconDropTool > .toolBar--iconBtn:hover {
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px transparent inset !important;
+    background-color: var(--bg3) !important;
+  }
+  .menuItem:hover, tooltip--docker:hover {
+    background: var(--dark-fg) !important;
+    color: var(--bg4) !important;
+  }
+  .color-picker-input {
+    color: var(--bg4) !important;
   }
 }
