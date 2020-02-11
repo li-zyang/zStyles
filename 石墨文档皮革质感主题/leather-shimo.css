@@ -515,4 +515,31 @@
   .sm-back-top svg rect {
     opacity: 0
   }
+  .sm-modal-content {
+    background: var(--bg4) !important;
+  }
+  .sm-sidebar > div {
+    background: var(--bg4) !important;
+  }
+  .s-title-text.s-title-text-history.active {
+    color: var(--dark-fg) !important;
+  }
+  .s-history-item.selected {
+    background: var(--default-fg) !important;
+    color: var(--bg4) !important;
+  }
+  .s-history-item.selected * {
+    color: var(--bg4) !important;
+  }
+  .s-history-item:hover {
+    background: var(--default-fg) !important;
+    color: var(--bg4) !important;
+  }
+  .s-history-item:hover * {
+    color: var(--bg4) !important;
+  }
+  .s-footer {
+    background: var(--bg4) !important;
+    border-color: transparent !important;
+  }
 }
