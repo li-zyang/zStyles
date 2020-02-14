@@ -270,9 +270,10 @@
     color: var(--default-fg) !important;
   }
   .sidebar-manager {
-	  background: transparent;
+	  /*background: transparent;*/
+    background: var(--bg4) !important;
 	  border-bottom: none;
-	  box-shadow: none;
+	  box-shadow: 0 1px 6px var(--shadow-bg4) !important;
   }
   .ql-toolbar.ql-snow .ql-inserts-label {
 	  background-color: var(--bg3);
@@ -541,5 +542,100 @@
   .s-footer {
     background: var(--bg4) !important;
     border-color: transparent !important;
+  }
+  .ql-sheet-row-headers * {
+    border-color: transparent !important;
+  }
+  .ql-sheet-col-headers * {
+    border-color: transparent !important;
+  }
+  p[class*="ql-long-"] span:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  p[class*="ql-long-"] span:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  div[class*="sidebar-body_"] {
+    background: var(--bg4) !important;
+  }
+  #sidebar-manager div {
+    border-color: transparent !important;
+  }
+  #sidebar-manager li[class*="active__"] {
+    color: var(--default-fg) !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid var(--default-fg) !important;
+  }
+  .history-change {
+    background: var(--bg4) !important;
+    border: 1px solid transparent !important;
+  }
+  .history-revert {
+    background: transparent !important;
+    cursor: pointer !important;
+  }
+  .history-change.state1::after {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), var(--bg4)) !important;
+  }
+  .doc-history .history-item .change {
+    box-shadow: 0 1px 1px transparent !important;
+  }
+  div[class*="popover-inner_"] {
+    border-radius: 3px !important;
+    box-shadow: 0 4px 16px 0 var(--shadow-bg2) !important;
+    background-color: transparent !important;
+  }
+  div[class*="suggest-container__"] {
+    background-color: var(--bg4) !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
+  }
+  div[class*="popover-triangle__"]::after {
+    border-color: var(--bg4) transparent transparent transparent !important;
+  }
+  div[class*="popover-triangle__"]::before {
+    border-color: var(--button-bg) transparent transparent transparent !important;
+  }
+  #sidebar-manager div[class*="body__"] {
+    background: transparent !important;
+  }
+  .sm-discuss .discord-footer .discord-footer-inner {
+    background-color: var(--bg4) !important;
+  }
+  div[class*="suggest-container__"] li[class*="selected__"] {
+    background: var(--default-fg) !important;
+  }
+  div[class*="suggest-container__"] li[class*="selected__"] * {
+    color: var(--bg4) !important;
+  }
+  .sm-discuss .doc-comment-content {
+    color: var(--default-fg);
+  }
+  .ql-comment-container div[class*="wrap__"][data-guid] {
+    background: var(--bg4) !important;
+  }
+  .ql-comment-container div[class*="divider__"] {
+    background: transparent !important;
+  }
+  .ql-comment-container div[class*="head__"] {
+    background: var(--bg4) !important;
+    box-shadow: 0 2px 6px var(--shadow-bg3) !important;
+  }
+  .ql-toolbar.ql-snow .ql-double-picker .ql-picker-label.ql-active .label-icon {
+    background-color: var(--header-bg);
+    box-shadow: 0px 0px 0px 1px transparent inset;
+  }
+  .ql-toolbar.ql-snow .ql-double-picker .ql-picker-label.ql-active .label-dropdown {
+    background-color: var(--header-bg);
+    box-shadow: 0px 0px 0px 1px transparent inset;
+  }
+  .ql-toolbar.ql-snow .ql-double-picker .ql-picker-label .label-dropdown {
+    border-color: transparent;
+  }
+  .ql-toolbar.ql-snow button:hover, 
+  .ql-toolbar.ql-snow .ql-picker:not(.ql-expanded) .ql-picker-label:hover {
+    box-shadow: 0px 0px 0px 1px transparent inset;
   }
 }
