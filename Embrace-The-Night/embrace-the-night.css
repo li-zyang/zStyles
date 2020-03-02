@@ -308,9 +308,17 @@
     border-bottom-color: var(--bg4) !important;
   }
   div[class*="login"][class*="button"], 
+  div[class*="login"][class*="wrap"], 
+  div[class*="login"][class*="header"], 
   div[id*="login"][id*="button"], 
+  div[id*="login"][id*="wrap"], 
+  div[id*="login"][id*="header"], 
   div[class*="signup"][class*="button"], 
-  div[id*="signup"][id*="button"] {
+  div[class*="signup"][class*="wrap"], 
+  div[class*="signup"][class*="header"], 
+  div[id*="signup"][id*="button"], 
+  div[id*="signup"][id*="wrap"], 
+  div[id*="signup"][id*="header"] {
     background: initial !important;
   }
   *[class*="caret"] {
