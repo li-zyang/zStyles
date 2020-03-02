@@ -8,6 +8,9 @@
 
 @-moz-document regexp("https?://(?!((.*(\\.js|\\.css|\\.md)#?(\\w|-|_)*)|(wordpress\\.com)|(northgardenhome\\.wordpress\\.com)|(cdpn\\.io))).*") {
   /* -- general -- */
+  html {
+    background: var(--bg1) !important;
+  }
   body {
     background: var(--body-background) !important;
   }
@@ -22,6 +25,13 @@
   *[style*="background:url"] {
     background: initial !important;
   }
+  .close, 
+  .close-button, 
+  .close_button, 
+  *[title*="close"], 
+  *[title*="关闭"] {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAeklEQVQ4jZXTwQ2AIBBEUUqgZDuYsDt3S6EES7AUPWnWBGSW6+Z9IIRCWndvW0ku97aRfhTSQNpFGnI4GNJ2NRIxgPoOlMgUK5El/osAqBJeRZZQvU42kI/E3dMnieC5txwZ4dEsjZcRBU8j8TOpb/2JkNYzOERA2nkDGHXfjRC6YNcAAAAASUVORK5CYII=") center no-repeat !important;
+  }
   *[class*="icon"][class*="wrap"] {
     background: transparent !important;
   }
@@ -30,6 +40,7 @@
     text-decoration: none;
     color: var(--link-unvisited-fg) !important;
     background-image: initial !important;
+    transition-duration: 0.5s;
   }
   a:visited {
     color: var(--link-visited-fg) !important;
@@ -54,29 +65,66 @@
   nav, 
   div[class*="nav"], 
   div[class*="header"], 
+  div[class*="top"], 
   div[id*="nav"], 
-  div[id*="header"] {
+  div[id*="header"], 
+  div[id*="top"] {
     background: var(--header-bg) !important;
   }
   div[class*="-header-"], 
   div[class*="_header_"], 
+  div[class*="-top"], 
   div[id*="-header-"], 
-  div[id*="_header_"] {
+  div[id*="_header_"], 
+  div[id*="-top"] {
     background: initial !important;
   }
   header * , 
   nav * , 
   div[class*="nav"] * , 
   div[class*="header"] * , 
+  div[class*="top"] * , 
   div[id*="nav"] * , 
-  div[id*="header"] * {
+  div[id*="header"] * , 
+  div[id*="top"] * {
     background: transparent !important;
+  }
+  header a, 
+  nav a, 
+  div[class*="nav"] a, 
+  div[class*="header"] a, 
+  div[class*="top"] a, 
+  div[id*="nav"] a, 
+  div[id*="header"] a, 
+  div[id*="top"] a {
+    color: var(--link-unvisited-fg) !important;
+    transition-duration: 0.5s;
+  }
+  header a:visited, 
+  nav a:visited, 
+  div[class*="nav"] a:visited, 
+  div[class*="header"] a:visited, 
+  div[class*="top"] a:visited, 
+  div[id*="nav"] a:visited, 
+  div[id*="header"] a:visited, 
+  div[id*="top"] a:visited {
+    color: var(--link-unvisited-fg) !important;
   }
   div[class*="-header-"] * , 
   div[class*="_header_"] * , 
+  div[class*="-top"] * , 
   div[id*="-header-"] * , 
-  div[id*="_header_"] * {
+  div[id*="_header_"] * , 
+  div[id*="-top"] * {
     background: initial !important;
+  }
+  div[class*="-header-"] a:visited, 
+  div[class*="_header_"] a:visited, 
+  div[class*="-top"] a:visited, 
+  div[id*="-header-"] a:visited, 
+  div[id*="_header_"] a:visited, 
+  div[id*="-top"] a:visited {
+    color: var(--link-visited-fg) !important;
   }
   main, 
   div[class*="main"], 
@@ -134,12 +182,16 @@
   }
   footer, 
   div[class*="footer"], 
-  div[id*="footer"] {
+  div[class*="bottom"], 
+  div[id*="footer"], 
+  div[id*="bottom"] {
     background: var(--footer-bg) !important;
   }
   footer * , 
   div[class*="footer"] * , 
-  div[id*="footer"] * {
+  div[class*="-bottom"] * , 
+  div[id*="footer"] * , 
+  div[id*="-bottom"] * {
     background: transparent !important;
   }
   aside, 
@@ -188,6 +240,12 @@
   div[id*="dialog"], 
   div[class*="overlay"], 
   div[id*="overlay"], 
+  div[class~="fixed"], 
+  div[id~="fixed"], 
+  div[class*="login"], 
+  div[id*="login"], 
+  div[class*="signup"], 
+  div[id*="signup"], 
   details-menu[class*="dropdown"], 
   details-menu[id*="dropdown"], 
   details-menu[class*="popup"], 
@@ -196,6 +254,8 @@
   details-menu[id*="dialog"], 
   details-menu[class*="overlay"], 
   details-menu[id*="overlay"], 
+  details-menu[class~="fixed"], 
+  details-menu[id~="fixed"], 
   span[class*="dropdown"], 
   span[id*="dropdown"], 
   span[class*="popup"], 
@@ -203,7 +263,13 @@
   span[class*="dialog"], 
   span[id*="dialog"], 
   span[class*="overlay"], 
-  span[id*="overlay"] {
+  span[id*="overlay"], 
+  span[class~="fixed"], 
+  span[id~="fixed"], 
+  form[class*="login"], 
+  form[id*="login"], 
+  form[class*="signup"], 
+  form[id*="signup"] {
     background: var(--bg4) !important;
     border-color: transparent !important;
   }
@@ -211,19 +277,41 @@
   div[id*="dropdown"]::before, 
   div[class*="popup"]::before, 
   div[id*="popup"]::before, 
+  div[class*="fixed"]::before, 
+  div[id*="fixed"]::before, 
+  div[class*="login"]::before, 
+  div[id*="login"]::before, 
+  div[class*="signup"]::before, 
+  div[id*="signup"]::before, 
   details-menu[class*="dropdown"]::before, 
   details-menu[id*="dropdown"]::before, 
   details-menu[class*="popup"]::before, 
   details-menu[id*="popup"]::before, 
+  details-menu[class~="fixed"]::before, 
+  details-menu[id~="fixed"]::before, 
   div[class*="dropdown"]::after, 
   div[id*="dropdown"]::after, 
   div[class*="popup"]::after, 
   div[id*="popup"]::after, 
+  div[class~="fixed"]::after, 
+  div[id~="fixed"]::after, 
+  div[class*="login"]::after, 
+  div[id*="login"]::after, 
+  div[class*="signup"]::after, 
+  div[id*="signup"]::after, 
   details-menu[class*="dropdown"]::after, 
   details-menu[id*="dropdown"]::after, 
   details-menu[class*="popup"]::after, 
-  details-menu[id*="popup"]::after {
+  details-menu[id*="popup"]::after, 
+  details-menu[class~="fixed"]::after, 
+  details-menu[id~="fixed"]::after {
     border-bottom-color: var(--bg4) !important;
+  }
+  div[class*="login"][class*="button"], 
+  div[id*="login"][id*="button"], 
+  div[class*="signup"][class*="button"], 
+  div[id*="signup"][id*="button"] {
+    background: initial !important;
   }
   *[class*="caret"] {
     border-color: transparent !important;
@@ -236,6 +324,13 @@
     background: transparent !important;
   }
   /* TODO: button, input, option (optgroup), select, textarea*/
+  
+  /* -- miscellaneous -- */
+  /* header on https://moodle.scnu.edu.cn/ */
+  .navbar .nav > li > a {
+    color: var(--link-unvisited-fg) !important;
+  }
+  /* -* miscellaneous *- */
 }
 @-moz-document regexp("https?://(?!((.*(\\.js|\\.css|\\.md)#?(\\w|-|_)*)|(wordpress\\.com)|(northgardenhome\\.wordpress\\.com)|(cdpn\\.io))).*") {
   /* -- SyntaxHighlighter -- */
