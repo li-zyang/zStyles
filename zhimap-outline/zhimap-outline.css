@@ -1,0 +1,218 @@
+/* ==UserStyle==
+@name           zhimap-outline
+@namespace      github.com/li-zyang
+@version        1.1.0
+@description    Patch style sheet for zhimap.com
+@author         阿昭
+==/UserStyle== */
+
+/**
+ * 本样式的目的：
+ * 1. 提供更美观的 Zhimap 思维导图页面
+ * 2. 修复 Zhimap 部分样式异常
+ * 2. 方便将思维导图大纲整理成易于用手机阅读的格式方便截图保存
+ * 
+ * 安装：
+ * 1. 在浏览器的拓展中心下载 "Stylus" 插件
+ * - 方法一：
+ * 2. 打开 https://userstyles.org/ 
+ * 3. 搜索 "zhimap-outline"
+ * 4. 安装样式
+ * - 方法二：
+ * 2. 复制文件中的所有内容
+ * 3. 进入 Stylus 管理页面
+ * 4. 勾选“作为用户样式”，点击编写新样式
+ * 5. 将刚才复制的内容粘贴，保存
+ * 
+ * 格式化思维导图大纲: 
+ * 1. 用 Zhimap 打开一个思维导图
+ * 2. 进入大纲模式（右上角菜单 -> 浏览模式 -> 右下角“文字模式”图标，也可以直接将网页地址中的 "medit" 改成 "mhtml"）
+ * 3. 可以看到格式化的大纲
+ * 
+ * 大纲截图：
+ * 1. 打开 Outline
+ * - 方法一：
+ * 2. 安装 "Fireshot" 浏览器插件
+ * 3. 将网页调整为 375px 宽（可在开发者工具中选中根节点查看它的布局，即可看到它的尺寸）
+ * 4. 使用插件截取整个页面
+ * - 方法二：
+ * 2. 打开大纲模式，按 F12 打开开发者工具
+ * 3. 右键 <body> 节点，右键单击，选择“截取节点快照 (Screenshot Node)”
+ * 4. 浏览器会将 <body> 节点截图，可在下载列表中找到该截图
+ * 
+ * 补丁：
+ * 1. 统一导图编辑页面顶部按钮字体和图标的大小
+ * 2. 修复 Zhimap 因使用过时的 <font> 标签导致较新版本浏览器中字体大小错误的问题
+ * 3. 将粗体修改为使用文字阴影形成的笔画加粗效果，不改变字体的宽度，看起来更美观
+ */
+
+@-moz-document domain("zhimap.com") {
+  :root {
+    --bold-shadow: .012em .012em 0px currentColor, -.012em .012em 0px currentColor, -.012em -.012em 0px currentColor, .012em -.012em currentColor;
+    --bold-altWeight: normal;
+  }
+  b, strong {
+    text-shadow: var(--bold-shadow);
+    font-weight: var(--bold-altWeight);
+  }
+  .navbar .nv-group .nv-btns .nv-btn {
+    font-size: 12px !important;
+    min-width: 28px;
+    width: auto;
+    padding: 0 8px;
+  }
+  .navbar .nv-group .nv-btns .nv-dropdown .nv-dropdown-link {
+    font-size: 12px;
+  }
+}
+
+@-moz-document url-prefix("https://zhimap.com/medit/"), url-prefix("https://zhimap.com/mmap/") {
+  font[size="7"] {
+    font-size: 40px;
+  }
+  font[size="6"] {
+    font-size: 32px;
+  }
+  font[size="5"] {
+    font-size: 24px;
+  }
+  p,
+  font {
+    font-size: 20px;
+  }
+  font[size="3"] {
+    font-size: 16px;
+  }
+  font[size="2"] {
+    font-size: 13px;
+  }
+  font[size="1"] {
+    font-size: 10px;
+  }
+  .zmNodeTitle {
+    padding: 5px 10px;
+  }
+}
+
+@-moz-document url-prefix("https://zhimap.com/mhtml/") {
+  /* viewport width: 375px (374.5 ~ 375.4 is okay) */
+  :root {
+    --bold-shadow: .012em .012em 0px currentColor, -.012em .012em 0px currentColor, -.012em -.012em 0px currentColor, .012em -.012em currentColor;
+    --bold-altWeight: normal;
+  }
+  html {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+  body {
+    padding-top: 20px;
+    width: 375px;
+    grid-area: 1 / 2 / 1 / 2;
+  }
+  p {
+    margin: 0px 0px; 
+    font-size: 11pt;
+  }
+  h1 {
+    margin: 0.75em 0px;
+    font-size: 18pt;
+  }
+  h2 {
+    margin: 1em 0px;
+    font-size: 16pt;
+  }
+  h3 {
+    margin: 0.575em 0px;
+    font-size: 14pt
+  }
+  h4 {
+    margin: 0.1em 0px;
+    font-size: 11pt;
+  }
+  h5, h6 {
+    margin: 0.1em 0px;
+    font-size: 11pt;
+  }
+  h1, h2, h3, .level_4 > li > h4, b, strong {
+    text-shadow: var(--bold-shadow);
+    font-weight: var(--bold-altWeight);
+  }
+  .level_2 {
+    padding-left: 0px;
+    font-size: 11pt;
+  }
+  [class*="level_"]:not(.level_1):not(.level_2) {
+    padding-left: 1em;
+    font-size: 11pt;
+  }
+  [class*="level_"]:not(.level_1):not(.level_2):not(.level_3):not(.level_4) p {
+    font-weight: normal;
+  }
+  .level_2, 
+  .level_3 {
+    margin-bottom: 1.82em;
+  }
+  body > img:first-child {
+    width: 25px;
+    height: 25px;
+  }
+  body > b:nth-child(2) span {
+    position: relative;
+    left: 5px;
+    bottom: 0.4em;
+  }
+  .back-to-mmap {
+    height: 1em;
+    line-height: 1em;
+    color: #676767
+  }
+  .back-to-mmap::before {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    left: 0px;
+    content: '';
+    margin-right: 10px;
+    height: 0px;
+    width: 0px;
+    background: transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #676767;
+  }
+  .level_5, .level_8, .level_11 {
+    list-style: none;
+    padding-left: 0px;
+  }
+  .level_4, .level_7, .level10 {
+    list-style: disc;
+  }
+  .mapInfo {
+    border-bottom-color: transparent;
+  }
+  h1 p,
+  h2 p,
+  h3 p,
+  h4 p,
+  h5 p,
+  h6 p,
+  font {
+    font-size: inherit;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
